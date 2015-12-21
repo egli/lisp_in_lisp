@@ -1,0 +1,84 @@
+#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+OPTIONS: author:t c:nil creator:nil d:(not "LOGBOOK") date:t e:t
+#+OPTIONS: email:nil f:t inline:t num:t p:nil pri:nil prop:nil stat:t
+#+OPTIONS: tags:t tasks:t tex:t timestamp:t title:t toc:t todo:t |:t
+#+TITLE: Lisp in Lisp
+#+DATE: <2015-12-10 Thu>
+#+AUTHOR: Christian Egli
+#+EMAIL: christian.egli@alumni.ethz.ch
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+#+EXCLUDE_TAGS: noexport
+#+CREATOR: Emacs 24.4.1 (Org mode 8.3.2)
+
+* Implementing Lisp
+
+- Your very own lisp interpreter
+- What does it take?
+
+* REPL
+
+  Read  
+  Eval
+  Print
+  Loop
+
+* REPL
+
+- Read
+  - a very simple parser
+- Eval
+  - evaluate expressions
+- Print
+  - print expressions
+
+* Implementing Eval
+
+
+Implementing Eval?
+
+* Evaluating a simple expression
+
+- nil => nil
+- 42 => 42
+- "foo" => "foo"
+
+* Evaluating in an environment
+
+- x => 42 given {'x 42}
+- + => + given {'+ +}
+
+* Basic (recursive) evaluation
+#+BEGIN_SRC clojure
+(+ 1 5)
+#+END_SRC
+
+- Evaluate all subexpressions
+- call first of list with rest as args
+
+* Evaluating special forms
+
+- (if nil "foo" "bar") => "bar"
+- (if 42 "foo" "bar") => "foo"
+
+* Evaluating do
+
+- (do) => nil
+- (do 42) => 42
+- (do "foo" 42 "bar") => "bar"
+
+* Adding to the environment
+
+- (let [x 42] x) => 42
+
+* Further work
+
+- lambda (aka ~fn~)
+
+* Literature
+- [[http://www.lispcast.com/the-most-important-idea-in-computer-science][The most important idea in computer science]]
+- [[http://www.buildyourownlisp.com/contents][Build your own Lisp]]
+- [[https://github.com/kanaka/mal][Make a Lisp]]
+- [[http://norvig.com/lispy.html][(How to Write a (Lisp) Interpreter (in Python))]]
+
+
