@@ -1,8 +1,8 @@
 # lisp_in_lisp
 
-[Code](src/lisp_in_lisp/src/lisp_in_lisp/core.clj) and
-["slides"](slides.org) for a meetup about implementing Lisp in Lisp
-for the Zürich Clojure meetup group.
+[Code](src/lisp_in_lisp/core.clj) and ["slides"](slides.org) for a
+meetup about implementing Lisp in Lisp for the Zürich Clojure meetup
+group.
 
 ## License
 
