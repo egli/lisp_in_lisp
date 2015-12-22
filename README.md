@@ -1,4 +1,4 @@
-# lisp_in_lisp
+# Lisp in lisp
 
 [Code](src/lisp_in_lisp/core.clj) and ["slides"](slides.org) for a
 meetup about implementing Lisp in Lisp for the
